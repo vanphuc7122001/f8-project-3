@@ -96,7 +96,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Sora:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -104,7 +104,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body>
+  <body id="home">
     <header class="header fixed">
       <div class="container">
         <!-- Header -->
@@ -124,16 +124,16 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item nav__link--active">
-                <a href="#!" class="nav__link">Home</a>
+                <a href="#home" class="nav__link">Home</a>
               </li>
               <li class="nav__item">
-                <a href="#!" class="nav__link">Services</a>
+                <a href="#service" class="nav__link">Services</a>
               </li>
               <li class="nav__item">
-                <a href="#!" class="nav__link">About</a>
+                <a href="#about" class="nav__link">About</a>
               </li>
               <li class="nav__item">
-                <a href="#!" class="nav__link">Doctors</a>
+                <a href="#doctor" class="nav__link">Doctors</a>
               </li>
             </ul>
           </nav>
@@ -172,8 +172,8 @@
       </div>
     </div>
 
-    <main style="height: 500px">
-      <section class="services">
+    <main>
+      <section id="service" class="services">
         <div class="container">
           <h2 class="service__heading heading">Our services</h2>
           <p class="service__desc desc">
@@ -293,7 +293,7 @@
         </div>
       </section>
 
-      <section class="feature">
+      <section id="about" class="feature">
         <div class="container">
           <div class="feature__inner">
             <div class="feature__media">
@@ -325,7 +325,7 @@
         </div>
       </section>
 
-      <section class="member">
+      <section id="doctor" class="member">
         <div class="container">
           <header class="member__header">
             <h2 class="heading member__heading">Our virtual dentist</h2>
@@ -527,5 +527,85 @@
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <section class="footer__column">
+            <!-- Logo -->
+            <a href="#!">
+              <div class="logo">
+                <span class="logo__circle"></span>
+                <div class="logo__text">
+                  <span class="logo__brand"> shine </span>
+                  <span class="logo__brand logo__brand--small">smile</span>
+                </div>
+              </div>
+            </a>
+            <p class="footer__desc">
+              Exceptional dental care for all ages. Your great smile begins with
+              a great dentist.
+            </p>
+          </section>
+          <section class="footer__column">
+            <h3 class="footer__heading">Support</h3>
+            <ul class="footer__list mt-20">
+              <li class="footer__item">Help center</li>
+              <li class="footer__item">Account information</li>
+              <li class="footer__item">About</li>
+              <li class="footer__item">Contact us</li>
+            </ul>
+            <h3 class="footer__heading mt-28">Support</h3>
+            <ul class="footer__list mt-20">
+              <li class="footer__item">Help center</li>
+              <li class="footer__item">Account information</li>
+            </ul>
+          </section>
+          <section class="footer__column">
+            <h3 class="footer__heading">Support</h3>
+            <ul class="footer__list mt-20">
+              <li class="footer__item">Help center</li>
+              <li class="footer__item">Account information</li>
+            </ul>
+            <h3 class="footer__heading mt-28">Support</h3>
+            <ul class="footer__list mt-20">
+              <li class="footer__item">Help center</li>
+            </ul>
+          </section>
+
+          <section class="footer__column">
+            <h3 class="footer__heading">Stay In Touch</h3>
+            <ul class="footer__social mt-20">
+              <li class="footer__link">
+                <i class="footer__link--facebook fab fa-facebook-f"></i>
+              </li>
+              <li class="footer__link">
+                <i class="footer__link--twitter fab fa-twitter"></i>
+              </li>
+              <li class="footer__link">
+                <i class="footer__link--linkedin fab fa-linkedin-in"></i>
+              </li>
+            </ul>
+
+            <h3 class="footer__heading mt-28">Subscribe</h3>
+            <p class="footer__desc footer__desc--small mt-20">
+              Subscribe our newsletter for the latest update of Dental care
+            </p>
+            <form action="#!" class="footer__form">
+              <input
+                class="footer__form-email"
+                type="email"
+                placeholder="Email your enter..."
+              />
+              <button class="footer__form-btn">Subscribe</button>
+            </form>
+          </section>
+        </div>
+        <div class="footer__line"></div>
+        <div class="footer__copyright">
+          2021 GDN. Copyright and All rights reserved.
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
