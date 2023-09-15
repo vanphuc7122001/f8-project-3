@@ -4,6 +4,7 @@
 
 :root {
   --header-bg: #10375c;
+  --primary-color: #2e80ce;
 }
 
 html {
@@ -26,16 +27,49 @@ a {
   margin: 0 auto;
 }
 
+.btn {
+  --height-btn: 60px;
+  display: inline-block;
+  min-width: 205px;
+  height: var(--height-btn);
+  line-height: var(--height-btn);
+  text-align: center;
+  padding: 0 20px;
+  border-radius: var(--radius-btn, 30px);
+  border: 1px solid #2e80ce;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+  background: #2e80ce;
+}
+
+.heading {
+  color: #10375c;
+  font-size: var(--font-size-heading, 5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.desc {
+  color: #575f66;
+  font-size: var(--font-size-desc, 1.8rem);
+  font-weight: 300;
+  line-height: var(--line-height-desc, 1.66);
+}
+
 /* header */
 
 .header {
+  padding-top: 30px;
   min-height: 100vh;
   background: var(--header-bg);
 }
 
 .header-top {
-  background: orange;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
@@ -82,16 +116,39 @@ a {
   font-weight: 300;
 }
 
-.nav {
-  margin-left: auto;
-}
-
 .nav__list {
   display: flex;
 }
 
 .nav__item {
   padding: 0 21px;
+  position: relative;
+}
+
+.nav__link--active::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 8px;
+  font-weight: 600;
+}
+
+.nav__link--active .nav__link {
+  font-weight: 600;
+  color: #fff;
+}
+
+.nav__link--active:hover,
+.nav__link:hover,
+.action__login:hover {
+  color: #fff;
+  text-shadow: 1px 0 0 currentColor;
 }
 
 .nav__link,
@@ -103,7 +160,16 @@ a {
 }
 
 .action__login {
-  margin-left: 201px;
-  /* padding: 0 28px; */
-  padding-right: 28px;
+  margin-right: 28px;
+}
+
+.action__signup {
+  --height-btn: 44px;
+  --radius-btn: 22px;
+  min-width: 104px;
+}
+
+.action__signup:hover {
+  color: var(--primary-color);
+  background: #fff;
 }
