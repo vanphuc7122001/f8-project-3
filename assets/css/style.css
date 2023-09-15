@@ -43,6 +43,11 @@ a {
   background: #2e80ce;
 }
 
+.btn:hover {
+  color: var(--primary-color);
+  background: #fff;
+}
+
 .heading {
   color: #10375c;
   font-size: var(--font-size-heading, 5rem);
@@ -58,12 +63,24 @@ a {
   line-height: var(--line-height-desc, 1.66);
 }
 
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 /* header */
 
 .header {
-  padding-top: 30px;
-  min-height: 100vh;
+  padding: 30px 0 8px;
   background: var(--header-bg);
+}
+
+.header.fixed {
+  position: sticky;
+  top: -22px;
+  z-index: 9999;
 }
 
 .header-top {
@@ -173,14 +190,14 @@ a {
   min-width: 104px;
 }
 
-.action__signup:hover {
-  color: var(--primary-color);
-  background: #fff;
+/* Hero */
+.hero-header {
+  padding-top: 68px;
+  padding: 68px 0 110px;
+  background: var(--header-bg);
 }
 
-/* Hero */
 .hero {
-  margin-top: 76px;
   display: flex;
 }
 
@@ -243,4 +260,91 @@ a {
   top: 65px;
   right: 13px;
   border-radius: 0px 6px 6px 0px;
+}
+
+/* Services */
+.services {
+  padding: 170px 0;
+}
+
+.service__heading,
+.service__desc {
+  text-align: center;
+}
+
+.service__desc {
+  margin-top: 18px;
+  width: 468px;
+  margin: 18px auto 0 auto;
+}
+
+.service__row {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service__img {
+  width: 570px;
+  height: 570px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.service__info {
+  margin-left: 130px;
+}
+
+.service__list {
+  margin: 56px 0 49px 22px;
+}
+
+.service-item {
+  display: flex;
+  width: 470px;
+  height: 128px;
+  border-radius: 10px;
+  background: #fff;
+  padding: 21px 18px 20px 22px;
+}
+
+.service-item:nth-of-type(2) {
+  margin: 6px 0;
+}
+
+.service-item:hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.service-item:hover .service-item__icon {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.service-item__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #10375c;
+  background: #eff6fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-item__body {
+  margin-left: 19px;
+}
+
+.service-item__heading {
+  --font-size-heading: 1.8rem;
+}
+
+.service-item__desc {
+  --line-clamp: 2;
+  margin-top: 8px;
+  height: 56px;
+  width: 351px;
 }
