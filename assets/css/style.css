@@ -489,7 +489,10 @@ a {
   border-radius: 6px;
   width: 270px;
   height: 318px;
+  max-width: 100%;
   position: relative;
+  transition: all ease 0.2s;
+  overflow: hidden;
 }
 
 .member-item__thumb {
@@ -498,6 +501,12 @@ a {
   border-radius: 6px;
   position: absolute;
   bottom: 0;
+  transition: all ease 0.2s;
+}
+
+.member-item:hover .member-item__thumb {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .member-item__name {
@@ -537,4 +546,46 @@ a {
   color: #fff;
   background: #2e80ce;
   border: none;
+}
+
+/* install */
+
+.install {
+  padding: 85px 0;
+}
+
+.install__inner {
+  border-radius: 4px;
+  background: #2e80ce;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.install__img {
+  width: 284px;
+  height: 522px;
+  object-fit: cover;
+  margin-left: 70px;
+  margin-top: -95px;
+}
+
+.install__content {
+  padding: 76px 70px 75px 160px;
+}
+
+.install__content-heading {
+  width: 489px;
+  color: #fff;
+}
+
+.install__content-desc {
+  margin-top: 18px;
+  color: #fff;
+}
+
+.install__row {
+  margin-top: 38px;
+  display: inline-flex;
+  column-gap: 28px;
 }
