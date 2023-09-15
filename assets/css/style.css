@@ -647,6 +647,7 @@ a {
 
 .new-item:hover {
   transform: translateY(-16px);
+  box-shadow: 0px 18px 50px rgba(0, 0, 0, 0.05);
 }
 
 .new-item__thumb {
@@ -679,4 +680,29 @@ a {
   color: #10375c;
   font-size: 1.4rem;
   font-weight: 400;
+}
+
+/* Appointment */
+
+.appointment {
+  padding: 85px 0;
+}
+
+.appointment__inner {
+  padding: 100px 0;
+  background: #f6fbff;
+}
+
+.appointment__heading {
+  text-align: center;
+}
+
+.appointment__desc {
+  margin: 38px auto;
+  text-align: center;
+  width: 617px;
+}
+
+.appointment__btn {
+  text-align: center;
 }
