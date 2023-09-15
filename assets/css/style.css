@@ -77,7 +77,7 @@ a {
   background: var(--header-bg);
 }
 
-.header.fixed {
+.fixed {
   position: sticky;
   top: -22px;
   z-index: 9999;
@@ -404,4 +404,60 @@ a {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.75; /* 175% */
+}
+
+/* Feature */
+.feature {
+  margin-top: 85px;
+  padding: 85px 0;
+  background: #fff;
+}
+
+.feature__inner {
+  display: flex;
+}
+
+.feature__media {
+  position: relative;
+  width: 48%;
+}
+
+.feature__img {
+  position: absolute;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.feature__img:first-child {
+  top: 0;
+  left: 0;
+  width: 512px;
+  height: 370px;
+}
+
+.feature__img:last-child {
+  width: 332px;
+  height: 370px;
+  bottom: 0;
+  right: 0;
+}
+
+.feature__content {
+  width: 52%;
+  padding: 82px 0 0 130px;
+}
+
+.feature__heading,
+.feature__desc {
+  width: 470px;
+}
+
+.feature__desc {
+  margin-top: 18px;
+}
+
+.feature__btn {
+  margin-top: 38px;
+  margin-bottom: 83px;
+  margin: 38px 0 83px;
 }
